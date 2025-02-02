@@ -1,68 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login e Registro</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Bem-vindo</h1>
-            <!-- Botão para alternar o modo escuro -->
-            <div class="dark-mode-toggle">
-                <span>🌙</span>
-                <input type="checkbox" id="darkModeToggle" />
-                <span>☀️</span>
-            </div>
-        </header>
-
-        <!-- Formulário de Login -->
-        <div id="loginForm" class="form-container">
-            <h2>Login</h2>
-            <form id="login" action="#">
-                <div class="input-group">
-                    <label for="loginEmail">Email</label>
-                    <input type="email" id="loginEmail" name="email" required>
-                    <p id="loginEmailError" class="error-message"></p>
-                </div>
-                <div class="input-group">
-                    <label for="loginPassword">Senha</label>
-                    <input type="password" id="loginPassword" name="password" required>
-                    <p id="loginPasswordError" class="error-message"></p>
-                </div>
-                <button type="submit">Entrar</button>
-                <p><a href="#" id="showRegisterForm">Ainda não tem uma conta? Registre-se!</a></p>
-                <p><a href="#" id="forgotPassword">Esqueceu a senha?</a></p>
-            </form>
-        </div>
-
-        <!-- Formulário de Registro -->
-        <div id="registerForm" class="form-container" style="display: none;">
-            <h2>Registro</h2>
-            <form id="register" action="#">
-                <div class="input-group">
-                    <label for="registerEmail">Email</label>
-                    <input type="email" id="registerEmail" name="email" required>
-                    <p id="registerEmailError" class="error-message"></p>
-                </div>
-                <div class="input-group">
-                    <label for="registerPassword">Senha</label>
-                    <input type="password" id="registerPassword" name="password" required>
-                    <p id="registerPasswordError" class="error-message"></p>
-                </div>
-                <div class="input-group">
-                    <label for="confirmPassword">Confirmar Senha</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" required>
-                    <p id="confirmPasswordError" class="error-message"></p>
-                </div>
-                <button type="submit">Registrar</button>
-                <p><a href="#" id="showLoginForm">Já tem uma conta? Faça login!</a></p>
-            </form>
-        </div>
+  <div class="container">
+    <div class="left-side">
+      <h1 class="welcome-back">WELCOME BACK!</h1>
+      <p class="description">To keep connected with us please login with your personal info.</p>
+      <button class="link-button" onclick="window.location.href='https://example.com'">Learn More</button>
     </div>
+    <div class="right-side">
+      <form action="#" method="POST" class="login-form">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
 
-    <script src="js/script.js"></script>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <div class="actions">
+          <button type="submit">Login</button>
+          <div class="forgot-options">
+            <a href="#">Forgot password?</a>
+            <a href="#">Don't have an account? Register!</a>
+          </div>
+          <button type="button" class="register-btn">CADASTRAR</button>
+        </div>
+      </form>
+      <div class="dark-mode-toggle">
+        <button id="darkModeBtn" onclick="toggleDarkMode()">🌙</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
