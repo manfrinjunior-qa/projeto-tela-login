@@ -1,121 +1,153 @@
-/* Reset de margens e paddings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Corpo da página */
-body {
+  }
+  
+  body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+  }
+  
+  .container {
     display: flex;
+    height: 100vh;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    transition: background-color 0.3s;
-}
-
-body.dark {
-    background-color: #333;
-    color: white;
-}
-
-/* Container principal */
-.container {
-    width: 100%;
-    max-width: 400px;
+  }
+  
+  .left-side {
+    background-color: #f0f0f0;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
-}
-
-body.dark .container {
-    background-color: #444;
-}
-
-/* Cabeçalho */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-size: 24px;
-}
-
-.dark-mode-toggle {
-    display: flex;
-    align-items: center;
-}
-
-.dark-mode-toggle input {
-    margin: 0 10px;
-}
-
-/* Formulários */
-.form-container {
-    padding: 20px;
-}
-
-h2 {
     text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Campos de entrada */
-.input-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
+    width: 40%;
+  }
+  
+  .welcome-back {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .description {
+    margin-top: 10px;
+    color: #666;
+  }
+  
+  .link-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-/* Mensagens de erro */
-.error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
-}
-
-/* Links */
-p a {
+  }
+  
+  .link-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .right-side {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .login-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .actions {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .forgot-options a {
+    color: #007bff;
     text-decoration: none;
-    color: #007BFF;
-}
-
-p a:hover {
+    margin-top: 10px;
+  }
+  
+  .forgot-options a:hover {
     text-decoration: underline;
-}
-
-/* Estilos do modo escuro */
-body.dark .error-message {
-    color: #ff6666;
-}
+  }
+  
+  .register-btn {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .register-btn:hover {
+    background-color: #218838;
+  }
+  
+  .dark-mode-toggle {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  button {
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background-color: #121212;
+    color: white;
+  }
+  
+  body.dark-mode .left-side {
+    background-color: #2d2d2d;
+  }
+  
+  body.dark-mode .right-side {
+    background-color: #333;
+  }
+  
+  body.dark-mode .login-form input {
+    background-color: #444;
+    color: white;
+    border: 1px solid #666;
+  }
+  
+  body.dark-mode .forgot-options a,
+  body.dark-mode .link-button {
+    color: #ddd;
+  }
+  
+  body.dark-mode .register-btn {
+    background-color: #17a2b8;
+  }
+  
+  body.dark-mode .register-btn:hover {
+    background-color: #138496;
+  }
+  
